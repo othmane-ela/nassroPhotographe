@@ -1,0 +1,133 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+main{
+    height: auto !important;
+}
+
+.separate{
+    margin: 1em 0;
+  h2 {
+        color: #FFF;
+        font-family: 'Dancing Script', cursive;
+        text-transform: capitalize;
+    
+    }
+    
+  p {
+        width: 50%;
+        margin: 0 auto;
+        color: #FFF;
+    
+    }
+}
+
+button:focus{
+    outline: none !important;
+}
+
+a:hover{
+    color: #FFF !important;
+    text-decoration: none !important;
+}
+
+a{
+    color: #FFF !important;
+}
+
+hr{
+    margin: 0;
+    padding: 0;
+    border-color: #bdbdbd52 !important;
+}
+
+.old-img {
+    position: relative;
+    float: right;
+    border: 2px solid #FFF;
+    border-bottom: 20px solid #FFF;
+    transform: rotate(7deg);
+}
+
+.old-img-two {
+    float: left;
+    position: relative;
+    border: 2px solid #FFF;
+    border-bottom: 20px solid #FFF;
+    transform: rotate(-7deg);
+}
+
+
+
+.bottom-bags{
+    display: inline;
+    position: absolute;
+    bottom: 0;
+    height: 74px;
+    width: 74px;
+    right: 44px;
+    bottom: 28px;
+    margin: 0 auto;
+    background-image: linear-gradient(#2d2d2d 0%, #1d1d1d 100%);
+    border-radius: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.badge-two{
+    position: absolute;
+    right: 4px;
+    bottom: 58px;
+    z-index: 10;
+}
+
+
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #ffffff;
+    background-color: #3e3e3e;
+    border: 1px solid #000000;
+}
+
+
+
+
+.page-link:hover {
+    z-index: 2;
+    color: #000 !important;
+    text-decoration: none;
+    background-color: #7e7e7e;
+    border-color: #7e7e7e;
+}
+
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}
+
+.page-item.active .page-link:hover{
+    z-index: 3;
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}
+
+.page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    cursor: auto;
+    background-color: #3e3e3e;
+    border: 1px solid #000000;
+}

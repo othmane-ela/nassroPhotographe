@@ -1,0 +1,18 @@
+ /* INPUT DESIGN */
+            
+ .my-in {
+    font-size: 0.8rem;
+    color: #FFF;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #FFF;
+    border-radius: 0px;
+    background-color: #060606;
+}
+
+.my-in:focus {
+    outline: none;
+    background-color: #060606;
+    border-color: #FFF;
+    box-shadow: none;
+}

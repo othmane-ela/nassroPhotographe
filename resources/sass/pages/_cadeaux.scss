@@ -1,0 +1,71 @@
+ /*** GIFT IDEA  PAGE ****/
+
+ dl, ol, ul {
+    margin: 0;
+}
+
+
+.categories-inline{
+    background-color: #202020;
+    color: #ffffff;
+    border-radius: 5px;
+
+}
+
+.categories-inline-ul ul{
+   margin-bottom: 0 !important;
+    
+    
+}
+    .categories-inline-ul li{
+    display: inline-block;
+    padding: 10px;
+    
+    
+}
+.categories-inline-ul li a{
+  color: #FFF;
+  padding: 20px;
+}
+.categories-inline-ul li a:hover{
+    text-decoration: none;
+    background-color:#1f1f1f;
+    transition: 0.7s;
+  }
+
+.dropdown .btn {
+    color: #FFFF;
+    text-decoration: none;
+    background-color: #1f1f1f;
+
+}
+
+
+.dropdown-menu {
+    background-color: #1f1f1f;
+    color: #FFFF;
+}
+
+.dropdown-menu a {
+    color: #FFF;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgb(26, 26, 26);
+}
+
+.categories-inline-ul .active{
+    background-color: #1f1f1f;
+    transition: 0.7s;
+}
+
+
+/* SHOW */
+
+.upload{
+    border: 1px dashed #757575;
+}
+
+.product-show-desc{
+    font-size: 18px;
+}

@@ -1,0 +1,35 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//COLORS 
+@import 'colors';
+
+// SHARED 
+@import 'shared/navbar';
+@import 'shared/shared';
+
+@import 'pages/home';
+@import 'pages/studio';
+@import 'pages/shooting';
+@import 'pages/cadeaux';
+@import 'pages/mariage';
+@import 'pages/event';
+@import 'pages/gallery';
+@import 'pages/checkout';
+
+
+
+
+
+@import 'componenets/product';
+@import 'componenets/input';
+
+
+

@@ -1,0 +1,49 @@
+
+                .show-container{
+                    position: relative;
+                    top: -99px;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    transition: 0.4s;
+                    overflow: hidden;
+                   
+                }
+
+            
+
+                #shooting_page{
+                    position: relative;
+                    z-index: 1;
+                    .content{
+                        margin: 0 auto;
+                        text-align: center;
+                        border: 2px solid #FFFF;
+                        width: 30%;
+                        margin: 0 auto;
+                        margin-bottom: 100px;
+                      
+                    }
+    
+                }
+              
+
+           
+                #show{
+                    position: relative;
+                    bottom: 103px;
+                    z-index: 0;
+                }
+
+
+/*
+                video {
+                    object-fit: cover;
+                    width: 100vw;
+                    height: 100vh;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                }
+
+                */

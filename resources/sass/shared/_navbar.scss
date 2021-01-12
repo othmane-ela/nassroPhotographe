@@ -1,0 +1,124 @@
+/* ICON NAV SIZE */
+.fab{
+  font-size: 27px !important;
+}
+
+
+/* navbar expanded */
+.navbar-brand{
+    z-index: 10;
+}
+
+.navbar-nav{
+  font-size: 14px;
+  text-align: center;
+
+  .nav-item {
+    a{
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: bold;
+    }
+  }
+
+}
+
+.logged-shortcute{
+  border: 0;
+  background: transparent;
+  outline: none;
+  color: #FFF;
+}
+.logged-shortcute:focus{
+  border: 0;
+  background: transparent;
+  outline: none;
+  color: #FFF;
+}
+
+.active{
+    color: #FFF !important;
+}
+
+.dropdown-item{
+  color: #FFF;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+  color: #FFF;
+  text-decoration: none;
+  background-color: #272727;
+}
+
+
+.bag-bdage{
+  position: relative;
+  bottom: 19px;
+  right: 6px;
+}
+
+.navbar-dark .navbar-toggler:focus {
+  color: rgba(255, 255, 255, 0.986);
+  border-color: rgba(255, 255, 255, 0) !important;
+  outline: none;
+}
+.navbar-dark .navbar-toggler {
+  color: rgba(255, 255, 255, 0.986);
+  border-color: rgba(255, 255, 255, 0) !important;
+  outline: none;
+}
+
+.dropdown-item a:hover{
+  color: #111;
+}
+
+/* navbar collapsed*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .op {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 14px;
+    color: rgb(214, 214, 214) !important;
+    display: block;
+  }
+
+
+
+  
+ 
+  
+  .sidenav a:hover {
+    color: #FFF !important;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+ 
+  @media screen and (min-width: 1200px) {
+    #mySidenav{
+        width: 0 !important;
+     }
+  }
+
