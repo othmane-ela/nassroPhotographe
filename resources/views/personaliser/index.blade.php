@@ -15,9 +15,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="black-overlay"></div>
-
                         <img src="{{productImage($product->model->image)}}" class="rounded shadow-sm" alt="our product" width="100%">
-
                     </div>
                     <div class="col-md-6">
                         <div class="product_details py-5  text-white">
@@ -33,7 +31,7 @@
                         <hr>
                         <div class="col clearfix">
                             @foreach ($images as $image)
-                            <img src="{{productImage('clts_images/'.$product->rowId.'/'.$image)}}" alt="product" class="mr-1 mb-2 old-img" width="20%" height="20%">
+                            <img src="{{productImage('clts_images/'.$product->client_path_img.'/'.$image)}}" alt="product" class="mr-1 mb-2 old-img" width="20%" height="20%">
                             @endforeach
                         </div>
                        <div class="col my-3">

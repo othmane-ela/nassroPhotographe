@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use session;
 use App\Product;
 use App\Visitor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Session;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
 class PersonalizerController extends Controller
@@ -30,10 +30,13 @@ class PersonalizerController extends Controller
         {   
             $product_on_cart = $product_on_cart->first();
 
-            if(File::exists(getClientPath().$product_on_cart->rowId)) {
-
-                $clientImages = scandir(getClientPath().$product_on_cart->rowId);
+         
+            
+            if(File::exists(getClientPath().$product_on_cart->client_path_img)) {
+             
+                $clientImages = scandir(getClientPath().$product_on_cart->client_path_img);
                $clientImages = array_splice($clientImages,2,count($clientImages));
+            
                
             return view('personaliser.index')->with([
                 'product' => $product_on_cart,
@@ -43,7 +46,8 @@ class PersonalizerController extends Controller
             }   
 
             return view('personaliser.index')->with([
-                'product' => $product_on_cart
+                'product' => $product_on_cart,
+                'images' => []
                 ]);
         }
 
@@ -121,8 +125,10 @@ class PersonalizerController extends Controller
      */
     public function destroy(Request $request, $rowId)
     {
-        File::deleteDirectory(getClientPath().$rowId);
+        $cart_id = session('cart_id');
+        File::deleteDirectory(getClientPath().$rowId.$cart_id);
         Cart::remove($rowId);
+        session()->forget('cart_id');
          return redirect()->route('cadeaux.show',$request->slug);
     }
 }

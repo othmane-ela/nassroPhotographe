@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use session;
 use App\Color;
 use App\Product;
 use Illuminate\Http\Request;
@@ -18,8 +19,6 @@ class CartController extends Controller
     public function index()
     {
     
-
-
             return view("cart.index")->with([
                 'discount' => $this->getMoney()->get('discount'),
                 'newSubtotal' =>$this->getMoney()->get('newSubtotal'),
@@ -47,8 +46,6 @@ class CartController extends Controller
             return redirect()->route('cart.index')->with('success_message','Le produit à été déja ajouté ! ');
         }
 
-        
-
         $product = Product::findOrFail($request->id);
         $ifIsRequired = "required";
 
@@ -62,35 +59,38 @@ class CartController extends Controller
             'images.*' => 'image|mimes:png,jpeg,jpg|max:1024',
         ]);
 
-    
         if($ifIsRequired == 'required' ){
             if($product->has_images != count($request->images)){
                 return redirect()->back()->with('unsuccess_message','Le produit requis '.$product->has_images.' image (s)');
             }
         }
     
-
         $color = Color::findOrFail($request->color);
+        
        $currentCart = Cart::add($product->id,$product->name,1,$product->price,['color_id'=>$color->id,'color_name'=>$color->name,'color_code'=>$color->code])
         ->associate('App\Product');
      
-
-
-        if($product->has_images != 0){
-            if($request->hasFile('images')){
-        
+        if($product->has_images != 0)
+        {
+            if($request->hasFile('images'))
+            {
                 $myUnique = uniqid("",true);
-                foreach($request->images as $image){
+                  $currentCart->client_path_img = $currentCart->rowId.$myUnique;
+                  foreach($request->images as $image){
+
                     $imageName = $image->getClientOriginalName();
                     $imageExt = $image->getClientOriginalExtension();
                     $newName = uniqid("",true).'.'.$imageExt;
                 
-                    if (!File::exists(getClientPath().$currentCart->rowId.$myUnique)) {
-                        File::makeDirectory(getClientPath().$currentCart->rowId.$myUnique);
-                        $image->move(getClientPath().$currentCart->rowId.$myUnique,$newName);
+                    if (!File::exists(getClientPath().$currentCart->client_path_img))
+                    {
+                        File::makeDirectory(getClientPath().$currentCart->client_path_img);
+                        $image->move(getClientPath().$currentCart->client_path_img,$newName);
                     }
-                    else{
-                        $image->move(getClientPath().$currentCart->rowId.$myUnique,$newName);
+
+                    else
+                    {
+                        $image->move(getClientPath().$currentCart->client_path_img,$newName);
                     }
                   
                 }
@@ -111,8 +111,10 @@ class CartController extends Controller
      */
     public function destroy($rowId)
     {
-        File::deleteDirectory(getClientPath().$rowId);
+        $cart_id = session('cart_id');
+        File::deleteDirectory(getClientPath().$rowId.$cart_id);
         Cart::remove($rowId);
+        session()->forget('cart_id');
         return back()->with('success_message','Le produit à été bien supprimé');
     }
 
