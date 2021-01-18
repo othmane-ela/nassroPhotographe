@@ -90,25 +90,25 @@ class CheckoutController extends Controller
         foreach(Cart::content() as $item)
         {
                  $clientImages = array();
-                if(File::exists(getClientPath().$item->rowId)) {
+                if(File::exists(getClientPath().$item->client_path_img)) {
 
-                    $clientImages = scandir(getClientPath().$item->rowId);
+                    $clientImages = scandir(getClientPath().$item->client_path_img);
                     $clientImages = array_splice($clientImages,2,count($clientImages));
-                    if (!File::exists(public_path().'/storage/orders/'.$item->rowId)){
-                        File::makeDirectory(public_path().'/storage/orders/'.$item->rowId);
+                    if (!File::exists(public_path().'/storage/orders/'.$item->client_path_img)){
+                        File::makeDirectory(public_path().'/storage/orders/'.$item->client_path_img);
                         foreach($clientImages as $img)
                         {
-                            rename(getClientPath().$item->rowId.'/'.$img,public_path().'/storage/orders/'.$item->rowId.'/'.$img);
+                            rename(getClientPath().$item->client_path_img.'/'.$img,public_path().'/storage/orders/'.$item->client_path_img.'/'.$img);
                         }
 
-                        File::deleteDirectory(getClientPath().$item->rowId);
+                        File::deleteDirectory(getClientPath().$item->client_path_img);
                     }
                  
                 }
                 OrderProduct::create([
                     'order_id' => $order->id,
                     'product_id' => $item->model->id,
-                    'folder_id' => $item->rowId,
+                    'folder_id' => $item->client_path_img,
                     'color' => $item->options->color_name,
                     'client_images' => json_encode($clientImages)
                 ]);
