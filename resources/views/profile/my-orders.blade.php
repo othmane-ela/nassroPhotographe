@@ -46,7 +46,7 @@
                             COMMANDE N° {{$order->id}} 
                           </div>
                           <div class="col text-light">
-                            TOTAL {{getPrice($order->billing_total)}} 
+                            TOTAL {{getPrice($order->billing_total)}}
                           </div>
                           <div class="col">
                             <a href="{{route('orders.show',$order->id)}}" class="m-btn">Plus détails</a>  
@@ -59,8 +59,8 @@
                         @foreach ($order->products as $product)
                        
                           <tr class="text-light" style="border-spacing: 2px;">
-                            <td> <a href="{{route('cadeaux.show',$product->slug)}}"><img src="{{productImage($product->image,$product->fromApi)}}" alt="product image" width="100" height="100">  </a></td>
-                            <td>{{$product->name}} <br> {{getPrice($product->public_price)}} <br> {{$product->pivot->quantity}}</td>
+                            <td> <a href="{{route('cadeaux.show',$product->slug)}}"><img src="{{productImage($product->image)}}" alt="product image" width="100" height="100">  </a></td>
+                            <td>{{$product->name}} <br> {{getPrice($product->price)}}</td>
                             <td>Shipped (Status) <br>
                             
                             @if ($order->shipped)

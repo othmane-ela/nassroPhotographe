@@ -8,8 +8,8 @@
 **Les articles commandés**<br>
 @foreach ($order->products as $product)
 Nom : {{$product->name}}<br>
-Prix : $€{{round($product->price/100,2)}}<br>
-Quantité: {{$product->pivot->color}}<br>
+Prix :{{round($product->price/100,2)}}. DHS<br>
+Couleur: {{$product->pivot->color}}<br>
 <img src="{{productImage($product->image)}}" alt="image Produit" width="100" height="100">
 @endforeach
 
