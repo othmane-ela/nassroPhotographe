@@ -1,0 +1,30 @@
+.js-cookie-consent{
+    position: absolute;
+    bottom: 0;
+    background-color: #151515;
+    color: #FFF;
+    position: fixed;
+    padding: 20px;
+    text-align: center;
+    z-index: 100;
+    width: 100%;
+
+    .cookie-consent__agree{
+        font-size: 0.8rem;
+        color: #FFF;
+      
+        padding: 5px;
+        border: 1px solid #FFF;
+        border-radius: 0px;
+        background-color: #060606;
+
+        &:focus{
+                outline: none;
+                background-color: #060606;
+                border-color: #FFF;
+                box-shadow: none;
+        }
+    }
+
+
+}

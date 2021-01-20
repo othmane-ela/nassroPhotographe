@@ -10,6 +10,7 @@
 
 @section('content')
 
+@include('cookieConsent::index')
 
 <section id="services">
 
@@ -226,50 +227,22 @@
 
     <div class="container">
         <div class="row pt-2 pb-4">
-
+            @foreach ($testimonails as $testimonail)
             <div class="col-lg-4 mb-2 ">
                 <div class="testimonial bg-dark-primary mx-auto text-white">
                     <div class="testi_icon d-block text-right p-3">
                         <i class="fas fa-quote-right"></i>
                     </div>
                     <div class="testi_img d-block text-center py-2">
-                        <img src="{{asset("internalimg/testimonials/1.jpg")}}" alt="testimonial image" class="rounded-circle mx-auto" width="50">
+                        <img src="{{productImage($testimonail->image)}}" alt="testimonial image" class="rounded-circle border-1 mx-auto" width="50">
                     </div>
                     <div class="testi_details text-center py-2">
-                        <h4><em>Mr Othmane El Ahmadi</em></h4>
-                        <p class="p-2 mx-auto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil neque quasi quaerat? Expedita saepe quae iusto voluptas aspernatur reiciendis, illum nam corporis corrupti, ex nisi tempora minima. Illo, sequi quam?</p>
+                        <h4><em>{{$testimonail->name}}</em></h4>
+                        <p class="p-2 mx-auto">{{$testimonail->message}}</p>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-lg-4 mb-2 ">
-                <div class="testimonial bg-dark-primary mx-auto text-white">
-                    <div class="testi_icon d-block text-right p-3">
-                        <i class="fas fa-quote-right"></i>
-                    </div>
-                    <div class="testi_img d-block text-center py-2">
-                        <img src="{{asset("internalimg/testimonials/1.jpg")}}" alt="testimonial image" class="rounded-circle mx-auto" width="50">
-                    </div>
-                    <div class="testi_details text-center py-2">
-                        <h4><em>Mr Othmane El Ahmadi</em></h4>
-                        <p class="p-2 mx-auto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil neque quasi quaerat? Expedita saepe quae iusto voluptas aspernatur reiciendis, illum nam corporis corrupti, ex nisi tempora minima. Illo, sequi quam?</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-2 ">
-                <div class="testimonial bg-dark-primary mx-auto text-white">
-                    <div class="testi_icon d-block text-right p-3">
-                        <i class="fas fa-quote-right"></i>
-                    </div>
-                    <div class="testi_img d-block text-center py-2">
-                        <img src="{{asset("internalimg/testimonials/1.jpg")}}" alt="testimonial image" class="rounded-circle mx-auto" width="50">
-                    </div>
-                    <div class="testi_details text-center py-2">
-                        <h4><em>Mr Othmane El Ahmadi</em></h4>
-                        <p class="p-2 mx-auto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil neque quasi quaerat? Expedita saepe quae iusto voluptas aspernatur reiciendis, illum nam corporis corrupti, ex nisi tempora minima. Illo, sequi quam?</p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
