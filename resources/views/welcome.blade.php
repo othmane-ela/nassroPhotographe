@@ -10,10 +10,7 @@
 
 @section('content')
 
-@include('cookieConsent::index')
-
 <section id="services">
-
 <div class="container">
     <div class="row">
         <div class="col-md-12 separate text-center">
@@ -247,9 +244,8 @@
     </div>
 </section>
       
-      
-@endsection
-       
-@section('owl.script')
 
 @endsection
+       
+
+
