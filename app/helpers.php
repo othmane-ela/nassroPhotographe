@@ -20,7 +20,7 @@ function getStock($stock)
     {
         if($stock > setting('site.stock_thershold'))
         {
-           
+
             $stockLebvel =  ' <span class="badge small badge-pill badge-success">En Stock</span>';
         }
         else if($stock <= setting('site.stock_thershold') && $stock > 0 ){

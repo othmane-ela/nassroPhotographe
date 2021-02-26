@@ -44,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <div id="app">
+       
             <nav class="navbar navbar-expand-xl fixed-top bg-dark-secondary navbar-dark shadow-lg">
                 <div id="mySidenav" class="sidenav">
                     <a href="{{route('cart.index')}}" class="mx-3">
@@ -158,7 +158,7 @@
 
                 @yield('content')
             </main>
-        </div>
+      
     
         <footer>
             <div class="container">    

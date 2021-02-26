@@ -11751,14 +11751,19 @@ ul {
 }
 
 .product {
-  border: 1px solid #FFF;
+  background-color: #FFF;
   border-radius: 3px;
   padding: 20px;
-  color: #FFF;
+  color: #000;
 }
 
 .product em {
   font-weight: bold;
+}
+
+.product .product_details {
+  margin-top: 22px;
+  color: #000;
 }
 
 /* INPUT DESIGN */

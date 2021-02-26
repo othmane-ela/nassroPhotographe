@@ -42,7 +42,7 @@
                     <a href="{{route('shooting.index')}}" class="news-card__card-link"></a>
                     <img src="https://images.unsplash.com/photo-1511150614563-600e6dc2c887?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80
                     " alt="" class="news-card__image">
-                    <div class="black-overlay"></div>
+                 
                     <div class="news-card__text-wrapper">
                         <h2 class="news-card__title">Shooting</h2>
                         <div class="news-card__post-p">Lorem ipsum dolor sit amet consectetur ...</div>
@@ -58,7 +58,7 @@
                 <div class="news-card">
                     <a href="{{route('studio.index')}}" class="news-card__card-link"></a>
                     <img src="https://images.unsplash.com/photo-1496559249665-c7e2874707ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="" class="news-card__image">
-                    <div class="black-overlay"></div>
+                   
                     <div class="news-card__text-wrapper">
                         <h2 class="news-card__title">Studio</h2>
                         <div class="news-card__post-p">Lorem ipsum dolor sit amet consectetur ...</div>
@@ -74,7 +74,7 @@
                 <div class="news-card">
                     <a href="{{route('cadeaux.index')}}" class="news-card__card-link"></a>
                     <img src="https://images.unsplash.com/photo-1592903297149-37fb25202dfa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=716&q=80" alt="" class="news-card__image">
-                    <div class="black-overlay"></div>
+                
                     <div class="news-card__text-wrapper">
                         <h2 class="news-card__title">Idée Cadeau</h2>
                         <div class="news-card__post-p">Lorem ipsum dolor sit amet consectetur ...</div>
@@ -96,7 +96,7 @@
                 <div class="news-card">
                     <a href="{{route('event.index')}}" class="news-card__card-link"></a>
                     <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="" class="news-card__image">
-                    <div class="black-overlay"></div>
+              
                     <div class="news-card__text-wrapper">
                         <h2 class="news-card__title">Èvenement</h2>
                         <div class="news-card__post-p">Lorem ipsum dolor sit amet consectetur ...</div>
@@ -112,7 +112,7 @@
                 <div class="news-card">
                     <a href="{{route('mariage.index')}}" class="news-card__card-link"></a>
                     <img src="https://images.unsplash.com/photo-1586695924412-42a045c492eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" alt="" class="news-card__image">
-                    <div class="black-overlay"></div>
+                
                     <div class="news-card__text-wrapper">
                         <h2 class="news-card__title">Mariage</h2>
                         <div class="news-card__post-p">Lorem ipsum dolor sit amet consectetur ...</div>
@@ -128,7 +128,7 @@
                 <div class="news-card">
                     <a href="{{route('shooting.index')}}" class="news-card__card-link"></a>
                     <img src="https://images.unsplash.com/photo-1576743962824-171cdf11bcd9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="" class="news-card__image">
-                    <div class="black-overlay"></div>
+                 
                     <div class="news-card__text-wrapper">
                         <h2 class="news-card__title">Shooting</h2>
                         <div class="news-card__post-p">Lorem ipsum dolor sit amet consectetur ...</div>
@@ -164,7 +164,7 @@
                 <div class="col-md-9">
                       <h4 class="text-white">Idée Cadeau</h4>
                       <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, consectetur! Unde nesciunt, autem quisquam eius voluptatibus, at vero animi similique consequuntur delectus minima reiciendis iure asperiores repudiandae ipsum soluta cum!</p>
-                      <a href="http://127.0.0.1:8000/cadeaux/Tass-Magic" class="m-btn ml-0">Voir Plus<i class="fas fa-long-arrow-alt-right"></i></a>
+                      <a href="#" class="m-btn ml-0">Voir Plus<i class="fas fa-long-arrow-alt-right"></i></a>
                 </div>
                 <div class="col-md-3 p-3">
                 <img src="https://images.unsplash.com/photo-1545080633-2749c77202ea?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" class="old-img" alt="Photo de service le plus récommandé" width="50%">
