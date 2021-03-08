@@ -36,7 +36,7 @@
     overflow: hidden;
     border-radius: 0.5rem;
     flex: 1;
-    min-width: 290px;
+   // min-width: 290px;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
 }
 
@@ -83,6 +83,7 @@
     position: absolute;
     bottom: 0rem;
     padding: 1rem;
+    width: 100%;
     color: white;
     transition: background-color 1.5s ease;
 }
@@ -93,10 +94,17 @@
     text-align: center;
 }
 
+.news-card__title .details{
+    transition: color 1s ease;
+    margin-bottom: .5rem;
+    text-align: center;
+    font-weight: 100;
+    
+}
+
 .news-card__post-p {
     font-size: .7rem;
     margin-bottom: .5rem;
-    color: #CCC;
     text-align: center;
 }
 

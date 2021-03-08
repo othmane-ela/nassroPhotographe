@@ -66,20 +66,27 @@
                 <h2>{{$categoryName}}</h2>
             </div>
             @forelse ($products as $product)
-            <div class="col-md-4 col-xs-6 mb-2">
-                <div class="product">
-                    <a href="{{route('cadeaux.show',$product->slug)}}">
-                        <div class="product_img">
-                            <img src="{{productImage($product->image)}}" alt="our product" width="100%">
+        
+            <div class="col-md-4">
+                <div class="news-card">
+                    <a href="{{route('cadeaux.show',$product->slug)}}" class="news-card__card-link"></a>
+                    <img src="{{productImage($product->image)}}" alt="" class="news-card__image">
+                   <div class="gray-overlay"></div>
+                    <div class="news-card__text-wrapper  font-weight-bold">
+                        <h2 class="news-card__title">{{$product->name}}</h2>
+                        <p class="news-card__title .details">{{getPrice($product->price)}}</p>
+                        <div class="news-card__details-wrapper">
+                            <p class="news-card__excerpt text-light"><em>{{$product->details}}</em></p>
+                        <a href="{{route('cadeaux.show',$product->slug)}}"><i class="fab fas text-white fa-shopping-bag"></i></a>
                         </div>
-                        <div class="product_details text-center">
-                            <h4>{{$product->name}}</h4>
-                            <p>{{$product->details}}</p>
-                             <em>{{getPrice($product->price)}}</em>
-                        </div>
-                    </a>
+                    </div>
                 </div>
-            </div>
+          </div>
+        
+
+
+
+          
             @empty
                 <div class="text-center col-md-12 text-white">Aucun produit n'a été trouvé.</div>
             @endforelse

@@ -246,7 +246,6 @@
         }
     </script>
     @include('cookieConsent::index')
-
 </body>
 </html>
 

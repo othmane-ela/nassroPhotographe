@@ -189,20 +189,22 @@
     <div class="container">
         <div class="row">
             @foreach ($products as $product)
-            <div class="col-md-6 col-lg-4 my-2 mx-auto shadow-sm">
-                <div class="product">
-                    <a href="{{route('cadeaux.show',$product->slug)}}">
-                        <div class="product_img">
-                            <img src="{{productImage($product->image)}}" alt="our product" width="100%">
+            <div class="col-md-4">
+                <div class="news-card">
+                    <a href="{{route('cadeaux.show',$product->slug)}}" class="news-card__card-link"></a>
+                    <img src="{{productImage($product->image)}}" alt="" class="news-card__image">
+                   <div class="gray-overlay"></div>
+                    <div class="news-card__text-wrapper  font-weight-bold">
+                        <h2 class="news-card__title">{{$product->name}}</h2>
+                        <p class="news-card__title .details">{{$product->details}}</p>
+                        <div class="news-card__details-wrapper">
+                            <p class="news-card__excerpt text-light"><em>{{getPrice($product->price)}}</em></p>
+                        <a href="{{route('cadeaux.show',$product->slug)}}"><i class="fab fas text-white fa-shopping-bag"></i></a>
                         </div>
-                        <div class="product_details text-center">
-                            <h4>{{$product->name}}</h4>
-                            <p>{{$product->details}}</p>
-                             <em>{{getPrice($product->price)}}</em>
-                        </div>
-                    </a>
+                    </div>
                 </div>
-            </div>
+          </div>
+        
             @endforeach
             <div class="col-md-12 my-2">
                 <a href="{{route('cadeaux.index')}}" class="m-btn">Voir Plus<i class="fas fa-long-arrow-alt-right"></i></a>
